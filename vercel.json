@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "env": {
+    "MONGODB_URI": "@mongodb-uri",
+    "EXTRACT_KEY": "@extract-key"
+  },
+  "routes": [
+    { "src": "/", "dest": "/api/dailypics" },
+    { "src": "/lib", "status": 404, "dest": "/not-found" },
+    { "src": "/lib/.*", "status": 404, "dest": "/not-found" }
+  ]
+}
