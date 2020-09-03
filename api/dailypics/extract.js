@@ -8,7 +8,8 @@ const getPicFromWallheaven = require("../../lib/wallheaven");
 const getPicFromSocwall = require("../../lib/socwall");
 const getFromSpaceCom = require("../../lib/spacecom");
 const getFromBigGeekdaddy = require("../../lib/big-geek-daddy");
-const getfromOutdoorPhotographer = require("../../lib/outdoor-photographer");
+const getFromOutdoorPhotographer = require("../../lib/outdoor-photographer");
+const getFromAstronomy = require("../../lib/astronomy");
 
 module.exports = async (req, res) => {
   if (req.method === "POST") {
@@ -33,7 +34,8 @@ module.exports = async (req, res) => {
         getPicFromSocwall(),
         getFromSpaceCom(),
         getFromBigGeekdaddy(),
-        getfromOutdoorPhotographer(),
+        getFromOutdoorPhotographer(),
+        getFromAstronomy(),
       ]);
       await collection.deleteMany({});
       await collection.insertMany(allPics);
