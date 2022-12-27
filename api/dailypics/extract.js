@@ -2,8 +2,6 @@ const connectToDatabase = require("../../lib/connect-database");
 const getPicFromBing = require("../../lib/bing");
 const getPicFromFstoppers = require("../../lib/fstoppers");
 const getPicFromNasa = require("../../lib/nasa");
-const getPicFromNationalGeographic = require("../../lib/national-geographic");
-const getPicFromUnsplash = require("../../lib/unsplash");
 const getPicFromWallheaven = require("../../lib/wallheaven");
 const getPicFromSocwall = require("../../lib/socwall");
 const getFromSpaceCom = require("../../lib/spacecom");
@@ -29,8 +27,6 @@ module.exports = async (req, res) => {
         getPicFromBing(),
         getPicFromFstoppers(),
         getPicFromNasa(),
-        getPicFromNationalGeographic(),
-        getPicFromUnsplash(),
         getPicFromWallheaven(),
         getPicFromSocwall(),
         getFromSpaceCom(),
