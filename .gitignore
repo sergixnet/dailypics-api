@@ -2,3 +2,4 @@
 .env
 .vscode
 TODO.md
+node_modules
